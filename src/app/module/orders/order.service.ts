@@ -31,7 +31,6 @@ export const createOrderService = async (orderDetails: OrderInterface) => {
     }
   };
 export const getOrderService = async (userEmail: string) => {
-  // retrieve order by email. if email is not provided, it will return all orders
   const emailFilter = userEmail ? { email: userEmail } : {};
 
   const orders = await OrderModel.find(emailFilter);
