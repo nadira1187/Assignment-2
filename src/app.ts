@@ -1,5 +1,5 @@
 import cors from 'cors';
-import express, { Application, NextFunction, Request, Response } from 'express';
+import express, { Application, Request, Response } from 'express';
 import { OrderRoute } from './app/module/orders/order.route';
 import { ProductRoute } from './app/module/products/product.route';
 
@@ -17,7 +17,7 @@ app.get("/", (req: Request, res: Response) => {
   res.json({ success: true, server: "running............." });
 });
 
-app.use("*", (req: Request, res: Response, next: NextFunction) => {
+app.use("*", (req: Request, res: Response) => {
   res.status(404).send({
     success: false,
     message: "Route not found",
