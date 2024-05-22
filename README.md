@@ -29,7 +29,7 @@ MONGODB_URI=mongodb://localhost:27017/ecommerce
 npx tsc
 5. **Run the development server:**
 npm run dev
-The API will be available at http://localhost:3000.
+The API will be available at http://localhost:5000.
 6. **To run the application in development mode, use:**
 npm run dev
 7. **To build and run the application in production mode, use:**
